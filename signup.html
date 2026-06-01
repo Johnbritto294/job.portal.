@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sign Up | Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="auth-body">
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+      <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <main class="split-auth-container">
+    <!-- Left Panel -->
+    <section class="auth-split-left" style="background-color: #4A5B6B;">
+      <div class="logo-text-large">STACKLY</div>
+      <div class="welcome-subtitle">Get started!</div>
+      <h2 class="welcome-message">Join our platform and discover endless career opportunities</h2>
+      <a href="index.html" class="btn btn-back-home">Back To Home</a>
+    </section>
+
+    <!-- Right Panel -->
+    <section class="auth-split-right">
+      <div class="auth-split-form-wrap">
+        <h1>Create your account</h1>
+        <p class="auth-subtitle">
+          Already have an account? 
+          <a href="login.html" id="login-link-role">Log In</a>
+        </p>
+
+        <form id="signup-form" novalidate>
+          <div class="input-group">
+            <label for="role-select-dropdown">Sign up as</label>
+            <select id="role-select-dropdown" class="split-select-field">
+              <option value="seeker">Job Seeker</option>
+              <option value="recruiter">Recruiter</option>
+            </select>
+          </div>
+
+          <!-- Recruiter-only -->
+          <div class="input-group role-field role-field-recruiter" hidden>
+            <label for="signup-company">Company name</label>
+            <input type="text" id="signup-company" class="input-field" placeholder="Your company name">
+            <span class="field-error" id="signup-company-error">Company name is required</span>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-name" id="signup-name-label">Full name</label>
+            <input type="text" id="signup-name" class="input-field" placeholder="Enter Full Name" required autocomplete="name">
+            <span class="field-error" id="signup-name-error">Name is required</span>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" class="input-field" placeholder="Enter Your Email" required autocomplete="email">
+            <span class="field-error" id="signup-email-error">Please enter a valid email</span>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="signup-password" class="input-field" placeholder="Enter Password (Min. 8 chars)" required minlength="8" autocomplete="new-password">
+              <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                <i class="ph ph-eye"></i>
+              </button>
+            </div>
+            <span class="field-error" id="signup-password-error">Password must be at least 8 characters</span>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-confirm">Confirm password</label>
+            <div class="password-wrapper">
+              <input type="password" id="signup-confirm" class="input-field" placeholder="Repeat password" required autocomplete="new-password">
+              <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                <i class="ph ph-eye"></i>
+              </button>
+            </div>
+            <span class="field-error" id="signup-confirm-error">Passwords do not match</span>
+          </div>
+          
+          <div class="auth-options-row" style="margin-bottom: 0.5rem;">
+            <label class="custom-checkbox-container">
+              <input type="checkbox" id="signup-terms" required>
+              <span class="checkbox-checkmark"></span>
+              <span class="checkbox-label-text">I agree to the Terms & Privacy Policy</span>
+            </label>
+          </div>
+          <span class="field-error" id="signup-terms-error" style="margin-bottom: 1.5rem; margin-top: -0.25rem;">You must agree to the Terms & Privacy Policy</span>
+
+          <button type="submit" class="btn btn-orange-action btn-auth-submit">
+            <span class="btn-text">Create Account</span>
+          </button>
+          
+          <div class="auth-divider">
+            <span>Or create with</span>
+          </div>
+
+          <div class="social-login-grid">
+            <a href="404.html" class="btn-social">
+              <i class="ph ph-facebook-logo" style="color: #1877F2;"></i> Facebook
+            </a>
+            <a href="404.html" class="btn-social">
+              <i class="ph ph-google-logo" style="color: #DB4437;"></i> Google
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Stackly – Loading...</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d0d0d; /* dark background */
+    }
+    .loader {
+      width: 150px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <img inert draggable="false" data-no-visual-search src="stacklylogo.webp" alt="Stackly Logo" class="loader" />
+  <script>
+    // After 2 seconds, redirect to the main page (index.html)
+    setTimeout(() => {
+      // You can change the target URL if needed
+      window.location.href = "index.html";
+    }, 2000);
+  </script>
+</body>
+</html>

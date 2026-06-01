@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dashboard | Stackly Research</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+      <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <div class="dashboard-layout-new">
+    <header class="dashboard-header-top">
+      <div class="dashboard-header-container">
+        <a href="index.html" class="dashboard-logo-text">
+          <span class="logo-stackly">STACKLY</span>
+          <span class="logo-research">PORTAL</span>
+        </a>
+        
+        <nav class="dashboard-nav-horizontal">
+          <a href="#" class="nav-item active" data-panel="overview">
+            <i class="ph ph-house-simple"></i> Dashboard
+          </a>
+          <a href="#" class="nav-item" data-panel="applied">
+            <i class="ph ph-briefcase"></i> My Applications
+          </a>
+          <a href="#" class="nav-item" data-panel="saved">
+            <i class="ph ph-bookmark"></i> Saved Jobs
+          </a>
+          <a href="#" class="nav-item" data-panel="interviews">
+            <i class="ph ph-calendar-blank"></i> Interviews
+          </a>
+          <a href="#" class="nav-item" data-panel="messages">
+            <i class="ph ph-chat-circle"></i> Messages
+          </a>
+        </nav>
+
+        <div class="dashboard-header-actions">
+          <div class="user-menu-wrapper">
+            <button class="user-menu-trigger">
+              <img inert draggable="false" data-no-visual-search src="https://ui-avatars.com/api/?name=Jane+Smith&background=2563EB&color=fff&size=40&rounded=true&bold=true" alt="User" class="user-avatar">
+              <span id="user-name" class="user-email">seeker@stackly.com</span>
+              <i class="ph ph-caret-down"></i>
+            </button>
+            <div class="user-menu-dropdown">
+              <div class="dropdown-user-header">
+                <strong>Jane Smith</strong>
+                <span>Job Seeker</span>
+              </div>
+              <div class="dropdown-menu-links">
+                <a href="#"><i class="ph ph-user"></i> My Profile</a>
+                <a href="#"><i class="ph ph-gear-six"></i> Settings</a>
+                <a href="#"><i class="ph ph-file-text"></i> My Resume</a>
+                <a href="index.html"><i class="ph ph-sign-out"></i> Back To Home</a>
+                <a href="#" id="logout-btn"><i class="ph ph-sign-out"></i> Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main-new">
+
+      <div class="dashboard-container">
+        <div class="dashboard-panel active" id="panel-overview">
+          <div class="dashboard-stats">
+            <div class="dash-stat-card-new" onclick="window.location.href='404.html'" style="cursor: pointer;">
+              <div class="stat-icon"><i class="ph ph-briefcase"></i></div>
+              <div>
+                <div class="stat-label-small">Applied Jobs</div>
+                <div class="stat-value-large" id="stat-applied">12</div>
+              </div>
+            </div>
+            <div class="dash-stat-card-new" onclick="window.location.href='404.html'" style="cursor: pointer;">
+              <div class="stat-icon icon-blue"><i class="ph ph-bookmark"></i></div>
+              <div>
+                <div class="stat-label-small">Saved Jobs</div>
+                <div class="stat-value-large" id="stat-saved">8</div>
+              </div>
+            </div>
+            <div class="dash-stat-card-new" onclick="window.location.href='404.html'" style="cursor: pointer;">
+              <div class="stat-icon icon-green"><i class="ph ph-eye"></i></div>
+              <div>
+                <div class="stat-label-small">Profile Views</div>
+                <div class="stat-value-large">45</div>
+              </div>
+            </div>
+            <div class="dash-stat-card-new" onclick="window.location.href='404.html'" style="cursor: pointer;">
+              <div class="stat-icon icon-purple"><i class="ph ph-chat-circle-dots"></i></div>
+              <div>
+                <div class="stat-label-small">Unread Messages</div>
+                <div class="stat-value-large">5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="quick-actions-grid">
+              <div class="quick-action-card" onclick="window.location.href='404.html'">
+                <i class="ph ph-magnifying-glass"></i>
+                <span>Find Jobs</span>
+              </div>
+              <div class="quick-action-card" onclick="window.location.href='404.html'">
+                <i class="ph ph-upload-simple"></i>
+                <span>Upload Resume</span>
+              </div>
+              <div class="quick-action-card" onclick="window.location.href='404.html'">
+                <i class="ph ph-sparkle"></i>
+                <span>Optimize Profile</span>
+              </div>
+              <div class="quick-action-card" onclick="window.location.href='404.html'">
+                <i class="ph ph-graduation-cap"></i>
+                <span>Career Advice</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-publications">
+            <div class="publications-header">
+              <h3>Recent Applications</h3>
+              <a href="404.html" class="view-all-link">View All <i class="ph ph-arrow-right"></i></a>
+            </div>
+            <div class="publications-list">
+              <div class="publication-item">
+                <div class="publication-badge badge-blue">ST</div>
+                <div class="publication-content">
+                  <h4>Senior Frontend Engineer</h4>
+                  <p>Stripe · Full-Time</p>
+                  <p class="publication-journal">$140k - $160k · Remote</p>
+                  <div class="publication-stats">
+                    <span><i class="ph ph-clock"></i> Applied 2 days ago</span>
+                    <span><i class="ph ph-circle" style="color:var(--success); font-weight: bold;"></i> Status: Interviewing</span>
+                  </div>
+                </div>
+                <div class="publication-date">May 2026</div>
+              </div>
+              <div class="publication-item">
+                <div class="publication-badge badge-purple">AB</div>
+                <div class="publication-content">
+                  <h4>Lead UI/UX Designer</h4>
+                  <p>Airbnb · Full-Time</p>
+                  <p class="publication-journal">$130k - $150k · Hybrid</p>
+                  <div class="publication-stats">
+                    <span><i class="ph ph-clock"></i> Applied 1 week ago</span>
+                    <span><i class="ph ph-circle" style="color:var(--primary); font-weight: bold;"></i> Status: Reviewing</span>
+                  </div>
+                </div>
+                <div class="publication-date">Apr 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-panel" id="panel-applied">
+          <h2>My Applications</h2>
+          <div class="glass" style="overflow:hidden">
+            <div class="dash-job-item">
+              <img inert draggable="false" data-no-visual-search src="images/job-list-1.webp" alt="" loading="lazy" width="48" height="48" style="border-radius:8px;object-fit:cover">
+              <div style="flex:1"><strong>Senior Frontend Engineer</strong><br><span style="color:var(--muted);font-size:0.875rem">Stripe · Applied 2 days ago</span></div>
+              <span style="font-size:0.8rem;padding:0.35rem 0.75rem;background:rgba(16,185,129,0.15);color:var(--success);border-radius:999px">Interviewing</span>
+            </div>
+            <div class="dash-job-item">
+              <img inert draggable="false" data-no-visual-search src="images/job-list-2.webp" alt="" loading="lazy" width="48" height="48" style="border-radius:8px;object-fit:cover">
+              <div style="flex:1"><strong>Lead UI/UX Designer</strong><br><span style="color:var(--muted);font-size:0.875rem">Airbnb · Applied 1 week ago</span></div>
+              <span style="font-size:0.8rem;padding:0.35rem 0.75rem;background:rgba(37,99,235,0.15);color:var(--primary);border-radius:999px">Reviewing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-panel" id="panel-saved">
+          <h2>Saved Jobs</h2>
+          <div class="empty-state-card" id="saved-empty">
+            <i class="ph ph-bookmark"></i>
+            <p>Your saved jobs will appear here.</p>
+          </div>
+          <div class="glass" style="overflow:hidden" id="saved-jobs-list">
+            <!-- Populated dynamically by dashboard.js -->
+          </div>
+        </div>
+
+        <div class="dashboard-panel" id="panel-interviews">
+          <h2>Interviews</h2>
+          <div class="empty-state-card">
+            <i class="ph ph-calendar-blank"></i>
+            <p>Your scheduled interviews will appear here.</p>
+          </div>
+        </div>
+
+        <div class="dashboard-panel" id="panel-messages">
+          <h2>Messages</h2>
+          <div class="empty-state-card">
+            <i class="ph ph-chat-circle"></i>
+            <p>Your messages and recruiter conversations will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

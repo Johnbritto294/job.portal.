@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Job Details | Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+      <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <header id="header" class="header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" style="display: none !important;"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-nav-outline">Login</a>
+        <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="mobile-nav-logo">
+        <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <button id="close-menu-btn" class="close-btn" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-nav-outline">Login</a>
+      <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="job-detail-hero">
+    <div class="container">
+      <div class="job-detail-header reveal fade-up" id="job-detail-header">
+        <img inert draggable="false" data-no-visual-search src="images/company-detail.webp" alt="Company" loading="lazy" width="100" height="100" id="detail-logo">
+        <div>
+          <h1 id="detail-title">Senior Frontend Engineer</h1>
+          <p style="color:var(--muted);font-size:1.125rem" id="detail-company">TechFlow Inc.</p>
+          <div class="job-detail-meta">
+            <span><i class="ph ph-map-pin"></i> <span id="detail-location">Remote, USA</span></span>
+            <span><i class="ph ph-currency-dollar"></i> <span id="detail-salary">$120k – $160k</span></span>
+            <span><i class="ph ph-clock"></i> Full-time</span>
+          </div>
+        </div>
+        <button class="save-job-btn" data-id="1" id="detail-save" style="font-size:2rem;margin-left:auto"><i class="ph ph-bookmark-simple"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container job-detail-layout">
+    <div class="job-detail-content reveal fade-up">
+      <h2>About the Role</h2>
+      <p id="detail-desc">We're seeking a Senior Frontend Engineer to lead our product UI. You'll architect scalable React applications, mentor junior developers, and collaborate with design on pixel-perfect implementations.</p>
+      <h2>Requirements</h2>
+      <ul id="detail-requirements">
+        <li>5+ years experience with React and TypeScript</li>
+        <li>Strong understanding of performance optimization</li>
+        <li>Experience with design systems and component libraries</li>
+        <li>Excellent communication and teamwork skills</li>
+      </ul>
+      <h2>Skills</h2>
+      <div class="skills-list" id="detail-skills">
+        <span>React</span><span>TypeScript</span><span>Next.js</span><span>GraphQL</span><span>CSS3</span><span>Jest</span>
+      </div>
+      <h2>Benefits</h2>
+      <ul>
+        <li>Competitive salary + equity</li>
+        <li>Full remote flexibility</li>
+        <li>Health, dental, and vision coverage</li>
+        <li>$2,000 annual learning budget</li>
+      </ul>
+    </div>
+    <aside class="sidebar-card glass reveal slide-right">
+      <h3 style="margin-bottom:1rem">Apply for this role</h3>
+      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem">Applications reviewed within 48 hours.</p>
+      <a href="404.html" class="btn btn-primary" style="width:100%;margin-bottom:1rem">Apply Now</a>
+      <button class="btn btn-outline save-job-btn" data-id="1" style="width:100%">Save Job</button>
+      <hr style="margin:2rem 0;border:none;border-top:1px solid var(--surface-border)">
+      <h4 style="margin-bottom:1rem">Company</h4>
+      <p style="color:var(--muted);font-size:0.9rem">TechFlow builds next-gen SaaS tools for enterprise teams. Founded 2018, 200+ employees, Series C funded.</p>
+    </aside>
+  </div>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <h2 class="reveal fade-up">Similar <span class="text-gradient">Jobs</span></h2>
+      <div class="similar-jobs-slider reveal fade-up" id="similar-slider">
+        <div class="similar-track" id="similar-track">
+          <div class="similar-card glass">
+            <img inert draggable="false" data-no-visual-search src="images/job-feature-2.webp" alt="" loading="lazy" width="280" height="120" style="margin-bottom:1rem;border-radius:8px;width:100%;height:100px;object-fit:cover">
+            <h4>UI Engineer</h4>
+            <p style="color:var(--muted);font-size:0.875rem">DesignHub · $100k–$140k</p>
+            <a href="404.html" class="btn btn-outline" style="margin-top:1rem;padding:0.5rem 1rem;font-size:0.875rem">View</a>
+          </div>
+          <div class="similar-card glass">
+            <img inert draggable="false" data-no-visual-search src="images/job-feature-4.webp" alt="" loading="lazy" width="280" height="120" style="margin-bottom:1rem;border-radius:8px;width:100%;height:100px;object-fit:cover">
+            <h4>Full Stack Dev</h4>
+            <p style="color:var(--muted);font-size:0.875rem">CloudNine · $115k–$155k</p>
+            <a href="404.html" class="btn btn-outline" style="margin-top:1rem;padding:0.5rem 1rem;font-size:0.875rem">View</a>
+          </div>
+          <div class="similar-card glass">
+            <img inert draggable="false" data-no-visual-search src="images/job-feature-3.webp" alt="" loading="lazy" width="280" height="120" style="margin-bottom:1rem;border-radius:8px;width:100%;height:100px;object-fit:cover">
+            <h4>React Developer</h4>
+            <p style="color:var(--muted);font-size:0.875rem">DataCore · $105k–$145k</p>
+            <a href="404.html" class="btn btn-outline" style="margin-top:1rem;padding:0.5rem 1rem;font-size:0.875rem">View</a>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:0.5rem;margin-top:1rem;justify-content:center">
+        <button class="btn btn-outline" id="similar-prev" style="padding:0.5rem 1rem"><i class="ph ph-caret-left"></i></button>
+        <button class="btn btn-outline" id="similar-next" style="padding:0.5rem 1rem"><i class="ph ph-caret-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky-apply" id="sticky-apply">
+    <div>
+      <strong id="sticky-title">Senior Frontend Engineer</strong>
+      <p style="font-size:0.875rem;color:var(--muted);margin:0" id="sticky-company">TechFlow</p>
+    </div>
+    <a href="404.html" class="btn btn-glow">Apply Now</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+<div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="lazy">
+          </a>
+          <p>Premium job portal connecting talent with world-class opportunities.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Twitter"><i class="ph ph-twitter-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="ph ph-instagram-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="ph ph-youtube-logo" style="font-size: 2rem;"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>For Job Seekers</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Employers</h4>
+          <ul>
+            <li><a href="404.html">Post a Job</a></li>
+            <li><a href="404.html">Pricing</a></li>
+            <li><a href="404.html">Recruiter Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p>Weekly curated jobs in your inbox.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email">
+            <button type="submit" class="btn btn-glow">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Stackly. All rights reserved.</span>
+        <span class="footer-legal"><a href="404.html">Privacy</a><span>&middot;</span><a href="404.html">Terms</a><span>&middot;</span><a href="404.html">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/jobs.js"></script>
+</body>
+</html>

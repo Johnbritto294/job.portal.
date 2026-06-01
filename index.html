@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Stackly â€” Premium job portal. Discover opportunities and build your career.">
+  <title>Stackly | Build Your Career</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="preconnect" href="/images/" crossorigin>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="show-loader">
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+            <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+                <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="display: none !important;"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-nav-outline">Login</a>
+        <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="mobile-nav-logo">
+        <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <button id="close-menu-btn" class="close-btn" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-nav-outline">Login</a>
+      <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="hero-slideshow parallax" data-speed="0.15" id="hero-slideshow" aria-hidden="true">
+      <div class="hero-slide active" data-slide="0">
+        <img inert draggable="false" data-no-visual-search src="images/hero-slide-1.webp" alt="" loading="eager"
+          srcset="images/hero-slide-1.webp 1920w" sizes="100vw">
+      </div>
+      <div class="hero-slide" data-slide="1">
+        <img inert draggable="false" data-no-visual-search src="images/hero-slide-2.webp" alt="" loading="lazy"
+          srcset="images/hero-slide-2.webp 1920w" sizes="100vw">
+      </div>
+      <div class="hero-slide" data-slide="2">
+        <img inert draggable="false" data-no-visual-search src="images/hero-slide-3.webp" alt="" loading="lazy"
+          srcset="images/hero-slide-3.webp 1920w" sizes="100vw">
+      </div>
+      <div class="hero-slide" data-slide="3">
+        <img inert draggable="false" data-no-visual-search src="images/hero-slide-4.webp" alt="" loading="lazy"
+          srcset="images/hero-slide-4.webp 1920w" sizes="100vw">
+      </div>
+      <div class="hero-slide" data-slide="4">
+        <img inert draggable="false" data-no-visual-search src="images/hero-slide-5.webp" alt="" loading="lazy"
+          srcset="images/hero-slide-5.webp 1920w" sizes="100vw">
+      </div>
+      <div class="hero-slide" data-slide="5">
+        <img inert draggable="false" data-no-visual-search src="images/hero-slide-6.webp" alt="" loading="lazy"
+          srcset="images/hero-slide-6.webp 1920w" sizes="100vw">
+      </div>
+    </div>
+    <div class="hero-gradient"></div>
+    <div class="hero-animated-gradient"></div>
+    <div class="hero-slide-dots" id="hero-slide-dots" role="tablist" aria-label="Hero background slides"></div>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2 reverse"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="container hero-grid">
+      <div class="hero-content reveal fade-up">
+        <h1>Build Your Career.<br>Discover <span class="text-glow">Opportunities.</span></h1>
+        <p class="hero-sub">Connect with top employers worldwide. Your dream role is one search away.</p>
+        <div class="typing-wrap">
+          <span id="typed-text" data-words='["Remote Roles","Tech Careers","Creative Jobs","Leadership Paths"]'></span><span class="typing-cursor"></span>
+        </div>
+        <div class="hero-cta">
+          <a href="404.html" class="btn btn-primary">Browse All Jobs</a>
+          <a href="404.html" class="btn btn-primary">Post a Job</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal slide-right delay-200">
+        <div class="hero-right-glow" aria-hidden="true"></div>
+        <div class="hero-right-frame glass">
+          <div class="hero-right-slider" id="hero-right-slider">
+            <div class="hero-right-slide active" data-caption="Collaborate in modern offices">
+              <img inert draggable="false" data-no-visual-search src="images/hero-right-1.webp" alt="Team working in office" loading="eager" width="720" height="900">
+            </div>
+            <div class="hero-right-slide" data-caption="Professional workspace">
+              <img inert draggable="false" data-no-visual-search src="images/hero-right-2.webp" alt="Office desk with laptop" loading="lazy" width="720" height="900">
+            </div>
+            <div class="hero-right-slide" data-caption="Work from anywhere abroad">
+              <img inert draggable="false" data-no-visual-search src="images/hero-right-3.webp" alt="Digital nomad working on laptop at cafe abroad" loading="lazy" width="720" height="900">
+            </div>
+            <div class="hero-right-slide" data-caption="Global city opportunities">
+              <img inert draggable="false" data-no-visual-search src="images/hero-right-4.webp" alt="Urban skyline abroad" loading="lazy" width="720" height="900">
+            </div>
+            <div class="hero-right-slide" data-caption="Premium coworking spaces">
+              <img inert draggable="false" data-no-visual-search src="images/hero-right-5.webp" alt="Coworking office interior" loading="lazy" width="720" height="900">
+            </div>
+            <div class="hero-right-slide" data-caption="Travel & work worldwide">
+              <img inert draggable="false" data-no-visual-search src="images/hero-right-6.webp" alt="Business travel abroad" loading="lazy" width="720" height="900">
+            </div>
+          </div>
+        </div>
+        <div class="hero-right-badge" id="hero-right-badge">
+          <i class="ph ph-sparkle"></i>
+          <span id="hero-right-caption">Collaborate in modern offices</span>
+        </div>
+        <div class="hero-right-dots" id="hero-right-dots" role="tablist" aria-label="Hero image slides"></div>
+      </div>
+    </div>
+   </section>
+
+      
+
+<section class="featured-jobs-section section">
+  <div class="container">
+    <div class="section-header text-center reveal fade-up">
+      <span class="section-badge">Featured</span>
+      <h2>Featured <span class="text-gradient">Jobs</span></h2>
+      <p>Hand-picked opportunities from top companies.</p>
+    </div>
+    <div class="grid-4">
+      
+      <!-- Card 1 -->
+      <div class="featured-job-card reveal fade-up delay-100">
+        <img src="images/featured-software.webp" class="featured-card-bg" alt="Software Engineer">
+        <div class="featured-card-overlay"></div>
+        <div class="featured-card-content">
+          <div class="featured-icon"><i class="ph ph-briefcase"></i></div>
+          <h3>Senior Software Engineer</h3>
+          <p>Google &bull; San Francisco, CA &bull; $120k - $150k</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="featured-job-card reveal fade-up delay-200">
+        <img src="images/featured-product.webp" class="featured-card-bg" alt="Product Manager">
+        <div class="featured-card-overlay"></div>
+        <div class="featured-card-content">
+          <div class="featured-icon"><i class="ph ph-desktop"></i></div>
+          <h3>Product Manager</h3>
+          <p>Microsoft &bull; Remote &bull; $130k - $160k</p>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="featured-job-card reveal fade-up delay-300">
+        <img src="images/featured-data.webp" class="featured-card-bg" alt="Data Scientist">
+        <div class="featured-card-overlay"></div>
+        <div class="featured-card-content">
+          <div class="featured-icon"><i class="ph ph-chart-line"></i></div>
+          <h3>Data Scientist</h3>
+          <p>Amazon &bull; Seattle, WA &bull; $110k - $140k</p>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="featured-job-card reveal fade-up delay-400">
+        <img src="images/featured-ux.webp" class="featured-card-bg" alt="UX Designer">
+        <div class="featured-card-overlay"></div>
+        <div class="featured-card-content">
+          <div class="featured-icon"><i class="ph ph-pen-nib"></i></div>
+          <h3>UX Designer</h3>
+          <p>Figma &bull; Remote &bull; $100k - $130k</p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <section class="why-section section">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Why Stackly</span>
+        <h2>Why Choose <span class="text-gradient">Stackly</span></h2>
+        <p>Built for professionals who demand more from their career platform.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card glass reveal fade-up delay-100">
+          <div class="why-icon"><i class="ph ph-shield-check"></i></div>
+          <h3>Verified Companies</h3>
+          <p>Every employer on Stackly undergoes rigorous verification. No scam listings, no fake postings.</p>
+        </div>
+        <div class="why-card glass reveal fade-up delay-200">
+          <div class="why-icon"><i class="ph ph-rocket"></i></div>
+          <h3>Instant Matching</h3>
+          <p>Our AI analyzes your skills and matches you with roles that fit your experience in seconds.</p>
+        </div>
+        <div class="why-card glass reveal fade-up delay-300">
+          <div class="why-icon"><i class="ph ph-globe"></i></div>
+          <h3>Global Opportunities</h3>
+          <p>Access jobs in 80+ countries with localized currency, timezone, and visa sponsorship filters.</p>
+        </div>
+        <div class="why-card glass reveal fade-up delay-400">
+          <div class="why-icon"><i class="ph ph-chart-line"></i></div>
+          <h3>Career Insights</h3>
+          <p>Get salary data, market trends, and skill demand analytics to negotiate better.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-preview-section section">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Latest</span>
+        <h2>Career <span class="text-gradient">Insights</span></h2>
+        <p>Expert tips and market trends to accelerate your growth.</p>
+      </div>
+      <div class="blog-preview-grid">
+        <article class="blog-preview-card glass reveal fade-up delay-100">
+          <div class="blog-preview-img">
+            <img inert draggable="false" data-no-visual-search src="images/blog-1.webp" alt="Remote work trends" loading="lazy" width="400" height="240">
+          </div>
+          <div class="blog-preview-content">
+            <span class="blog-tag">Trends</span>
+            <h3>The Future of Remote Work in 2026</h3>
+            <p>Discover how hybrid models are reshaping global employment and what it means for your career.</p>
+            <a href="404.html" class="blog-read-more">Read More <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-preview-card glass reveal fade-up delay-200">
+          <div class="blog-preview-img">
+            <img inert draggable="false" data-no-visual-search src="images/blog-2.webp" alt="Salary negotiation" loading="lazy" width="400" height="240">
+          </div>
+          <div class="blog-preview-content">
+            <span class="blog-tag">Guide</span>
+            <h3>How to Negotiate Your First Offer</h3>
+            <p>Proven strategies to maximize your compensation package without losing the offer.</p>
+            <a href="404.html" class="blog-read-more">Read More <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-preview-card glass reveal fade-up delay-300">
+          <div class="blog-preview-img">
+            <img inert draggable="false" data-no-visual-search src="images/blog-3.webp" alt="Tech skills" loading="lazy" width="400" height="240">
+          </div>
+          <div class="blog-preview-content">
+            <span class="blog-tag">Technology</span>
+            <h3>Top 10 Skills for Tech Jobs in 2026</h3>
+            <p>Stay ahead with the most in-demand technical skills that employers are actively seeking.</p>
+            <a href="404.html" class="blog-read-more">Read More <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   <section class="companies-strip">
+    <div class="container text-center reveal fade-up">
+      <p class="companies-strip-title">Trusted by leading companies</p>
+    </div>
+    <div class="logo-track-wrap">
+      <div class="logo-track" id="logo-track">
+        <div class="logo-item" data-brand="google">
+          <img inert draggable="false" data-no-visual-search src="images/brand-google.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Google</span>
+        </div>
+        <div class="logo-item" data-brand="microsoft">
+          <img inert draggable="false" data-no-visual-search src="images/brand-microsoft.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Microsoft</span>
+        </div>
+        <div class="logo-item" data-brand="amazon">
+          <img inert draggable="false" data-no-visual-search src="images/brand-amazon.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Amazon</span>
+        </div>
+        <div class="logo-item" data-brand="meta">
+          <img inert draggable="false" data-no-visual-search src="images/brand-meta.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Meta</span>
+        </div>
+        <div class="logo-item" data-brand="apple">
+          <img inert draggable="false" data-no-visual-search src="images/brand-apple.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Apple</span>
+        </div>
+        <div class="logo-item" data-brand="netflix">
+          <img inert draggable="false" data-no-visual-search src="images/brand-netflix.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Netflix</span>
+        </div>
+        <div class="logo-item" data-brand="spotify">
+          <img inert draggable="false" data-no-visual-search src="images/brand-spotify.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Spotify</span>
+        </div>
+        <div class="logo-item" data-brand="stripe">
+          <img inert draggable="false" data-no-visual-search src="images/brand-stripe.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Stripe</span>
+        </div>
+        <div class="logo-item" data-brand="airbnb">
+          <img inert draggable="false" data-no-visual-search src="images/brand-airbnb.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Airbnb</span>
+        </div>
+        <div class="logo-item" data-brand="uber">
+          <img inert draggable="false" data-no-visual-search src="images/brand-uber.webp" alt="" loading="lazy" width="200" height="64">
+          <span class="company-name">Uber</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Process</span>
+        <h2>How It <span class="text-gradient">Works</span></h2>
+        <p>Land your next role in four simple steps.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card glass reveal zoom-in delay-100">
+          <div class="step-card-bg">
+            <img inert draggable="false" data-no-visual-search src="images/step-bg-1.webp" alt="" loading="lazy" width="640" height="360">
+          </div>
+          <div class="step-card-content">
+            <span class="step-number">01</span>
+            <div class="step-icon"><i class="ph ph-user-plus"></i></div>
+            <h3>Create Profile</h3>
+            <p>Sign up and build your professional profile in minutes.</p>
+          </div>
+        </div>
+        <div class="step-card glass reveal zoom-in delay-200">
+          <div class="step-card-bg">
+            <img inert draggable="false" data-no-visual-search src="images/step-bg-2.webp" alt="" loading="lazy" width="640" height="360">
+          </div>
+          <div class="step-card-content">
+            <span class="step-number">02</span>
+            <div class="step-icon"><i class="ph ph-magnifying-glass"></i></div>
+            <h3>Search Jobs</h3>
+            <p>Filter by role, salary, location, and experience level.</p>
+          </div>
+        </div>
+        <div class="step-card glass reveal zoom-in delay-300">
+          <div class="step-card-bg">
+            <img inert draggable="false" data-no-visual-search src="images/step-bg-3.webp" alt="" loading="lazy" width="640" height="360">
+          </div>
+          <div class="step-card-content">
+            <span class="step-number">03</span>
+            <div class="step-icon"><i class="ph ph-paper-plane-tilt"></i></div>
+            <h3>Apply Instantly</h3>
+            <p>One-click applications with your saved resume.</p>
+          </div>
+        </div>
+        <div class="step-card glass reveal zoom-in delay-400">
+          <div class="step-card-bg">
+            <img inert draggable="false" data-no-visual-search src="images/step-bg-4.webp" alt="" loading="lazy" width="640" height="360">
+          </div>
+          <div class="step-card-content">
+            <span class="step-number">04</span>
+            <div class="step-icon"><i class="ph ph-trophy"></i></div>
+            <h3>Get Hired</h3>
+            <p>Track applications and receive offers from top companies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal fade-up">
+          <div class="counter-wrap"><span class="counter" data-target="10">0</span><span class="suffix">K+</span></div>
+          <p>Active Jobs</p>
+        </div>
+        <div class="stat-item reveal fade-up delay-200">
+          <div class="counter-wrap"><span class="counter" data-target="5">0</span><span class="suffix">K+</span></div>
+          <p>Companies</p>
+        </div>
+        <div class="stat-item reveal fade-up delay-400">
+          <div class="counter-wrap"><span class="counter" data-target="20">0</span><span class="suffix">K+</span></div>
+          <p>Happy Users</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Explore</span>
+        <h2>Job <span class="text-gradient">Categories</span></h2>
+        <p>Find roles tailored to your expertise.</p>
+      </div>
+      <div class="grid-3">
+        <a href="404.html" class="category-card reveal fade-up delay-100" data-tilt>
+          <img inert draggable="false" data-no-visual-search src="images/cat-tech.webp" alt="Technology" loading="lazy" srcset="images/cat-tech.webp 400w" sizes="(max-width:768px) 100vw, 33vw">
+          <div class="category-overlay"><h3>Technology</h3><span>2,400+ jobs</span></div>
+        </a>
+        <a href="404.html" class="category-card reveal fade-up delay-200" data-tilt>
+          <img inert draggable="false" data-no-visual-search src="images/cat-design.webp" alt="Design" loading="lazy" srcset="images/cat-design.webp 400w" sizes="(max-width:768px) 100vw, 33vw">
+          <div class="category-overlay"><h3>Design</h3><span>890+ jobs</span></div>
+        </a>
+        <a href="404.html" class="category-card reveal fade-up delay-300" data-tilt>
+          <img inert draggable="false" data-no-visual-search src="images/cat-marketing.webp" alt="Marketing" loading="lazy" srcset="images/cat-marketing.webp 400w" sizes="(max-width:768px) 100vw, 33vw">
+          <div class="category-overlay"><h3>Marketing</h3><span>1,200+ jobs</span></div>
+        </a>
+        <a href="404.html" class="category-card reveal fade-up delay-100" data-tilt>
+          <img inert draggable="false" data-no-visual-search src="images/cat-finance.webp" alt="Finance" loading="lazy" srcset="images/cat-finance.webp 400w" sizes="(max-width:768px) 100vw, 33vw">
+          <div class="category-overlay"><h3>Finance</h3><span>750+ jobs</span></div>
+        </a>
+        <a href="404.html" class="category-card reveal fade-up delay-200" data-tilt>
+          <img inert draggable="false" data-no-visual-search src="images/cat-health.webp" alt="Healthcare" loading="lazy" srcset="images/cat-health.webp 400w" sizes="(max-width:768px) 100vw, 33vw">
+          <div class="category-overlay"><h3>Healthcare</h3><span>620+ jobs</span></div>
+        </a>
+        <a href="404.html" class="category-card reveal fade-up delay-300" data-tilt>
+          <img inert draggable="false" data-no-visual-search src="images/cat-remote.webp" alt="Remote" loading="lazy" srcset="images/cat-remote.webp 400w" sizes="(max-width:768px) 100vw, 33vw">
+          <div class="category-overlay"><h3>Remote</h3><span>3,100+ jobs</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium-benefits-section section">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Benefits</span>
+        <h2>The Stackly <span class="text-gradient">Advantage</span></h2>
+        <p>Exclusive perks that make your job search faster, smarter, and more rewarding.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card glass reveal zoom-in delay-100">
+          <img inert draggable="false" data-no-visual-search src="images/step-bg-1.webp" alt="Premium benefits" loading="lazy" width="640" height="360" class="benefit-img">
+          <div class="benefit-badge"><i class="ph ph-crown"></i></div>
+          <h3>Premium Access</h3>
+          <p>Unlock exclusive salary insights, company reviews, and priority matching with top employers.</p>
+        </div>
+        <div class="benefit-card glass reveal zoom-in delay-200">
+          <img inert draggable="false" data-no-visual-search src="images/step-bg-2.webp" alt="AI matching" loading="lazy" width="640" height="360" class="benefit-img">
+          <div class="benefit-badge"><i class="ph ph-sparkle"></i></div>
+          <h3>AI-Powered Matching</h3>
+          <p>Our algorithm learns your preferences and surfaces roles that truly fit your skills and goals.</p>
+        </div>
+        <div class="benefit-card glass reveal zoom-in delay-300">
+          <img inert draggable="false" data-no-visual-search src="images/step-bg-3.webp" alt="Global reach" loading="lazy" width="640" height="360" class="benefit-img">
+          <div class="benefit-badge"><i class="ph ph-globe"></i></div>
+          <h3>Global Network</h3>
+          <p>Connect with companies across 80+ countries with localized currency, visa filters, and timezone-aware listings.</p>
+        </div>
+        <div class="benefit-card glass reveal zoom-in delay-400">
+          <img inert draggable="false" data-no-visual-search src="images/step-bg-4.webp" alt="Interview prep" loading="lazy" width="640" height="360" class="benefit-img">
+          <div class="benefit-badge"><i class="ph ph-chart-bar"></i></div>
+          <h3>Interview Insights</h3>
+          <p>Get access to practice questions, company-specific tips, and real interview experiences from past candidates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Testimonials</span>
+        <h2>What Our <span class="text-gradient">Users Say</span></h2>
+      </div>
+      <div class="testimonial-slider reveal zoom-in" id="testimonial-slider">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <i class="ph ph-quotes quote-icon"></i>
+              <p>"Stackly helped me land my dream role at a Fortune 500 company in under three weeks. The UI is stunning and the matching is spot-on."</p>
+              <div class="testimonial-author">
+                <img inert draggable="false" data-no-visual-search src="images/avatar-1.webp" alt="Sarah Chen" loading="lazy" width="56" height="56">
+                <div class="author-info"><h4>Sarah Chen</h4><span>Software Engineer @ Google</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <i class="ph ph-quotes quote-icon"></i>
+              <p>"As a recruiter, we've cut our hiring time in half. The premium experience reflects the quality of candidates we attract."</p>
+              <div class="testimonial-author">
+                <img inert draggable="false" data-no-visual-search src="images/avatar-2.webp" alt="Marcus Webb" loading="lazy" width="56" height="56">
+                <div class="author-info"><h4>Marcus Webb</h4><span>Head of Talent @ Stripe</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <i class="ph ph-quotes quote-icon"></i>
+              <p>"The glassmorphism design isn't just pretty â€” the platform is genuinely fast and intuitive. Best job portal I've used."</p>
+              <div class="testimonial-author">
+                <img inert draggable="false" data-no-visual-search src="images/avatar-3.webp" alt="Elena Rodriguez" loading="lazy" width="56" height="56">
+                <div class="author-info"><h4>Elena Rodriguez</h4><span>Product Designer @ Airbnb</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <i class="ph ph-quotes quote-icon"></i>
+              <p>"Saved jobs sync across devices perfectly. I applied to twelve roles and tracked everything from one dashboard."</p>
+              <div class="testimonial-author">
+                <img inert draggable="false" data-no-visual-search src="images/avatar-4.webp" alt="James Okonkwo" loading="lazy" width="56" height="56">
+                <div class="author-info"><h4>James Okonkwo</h4><span>Data Analyst @ Amazon</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots" id="slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+    <section class="cta-section">
+    <div class="cta-bg parallax" data-speed="0.2">
+      <img inert draggable="false" data-no-visual-search src="images/cta-bg.webp" alt="" loading="lazy" srcset="images/cta-bg.webp 1920w" sizes="100vw">
+    </div>
+    <div class="cta-overlay"></div>
+    <div class="cta-waves">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="rgba(248,250,252,0.15)">
+        <path d="M0,64 C320,120 480,0 720,48 C960,96 1200,24 1440,64 L1440,120 L0,120 Z"></path>
+      </svg>
+    </div>
+    <div class="container cta-content reveal fade-up">
+      <h2>Upload Your Resume Today</h2>
+      <p>Get matched with opportunities that fit your skills. Join 20,000+ professionals already on Stackly.</p>
+      <a href="404.html" class="btn btn-glow">Get Started Free</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="lazy">
+          </a>
+          <p>Premium job portal connecting talent with world-class opportunities.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Twitter"><i class="ph ph-twitter-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="ph ph-instagram-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="ph ph-youtube-logo" style="font-size: 2rem;"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>For Job Seekers</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Employers</h4>
+          <ul>
+            <li><a href="404.html">Post a Job</a></li>
+            <li><a href="404.html">Pricing</a></li>
+            <li><a href="404.html">Recruiter Tools</a></li>
+            <li><a href="404.html">Company Directory</a></li>
+            <li><a href="404.html">Hiring Solutions</a></li>
+            <li><a href="404.html">Enterprise Plans</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p>Weekly curated jobs in your inbox.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email">
+            <button type="submit" class="btn btn-glow">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Stackly. All rights reserved.</span>
+        <span class="footer-legal"><a href="404.html">Privacy</a><span>&middot;</span><a href="404.html">Terms</a><span>&middot;</span><a href="404.html">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

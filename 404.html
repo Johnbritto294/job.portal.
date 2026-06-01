@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Page Not Found — Stackly. Discover career opportunities.">
+  <title>Page Not Found | Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/404.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <!-- Page Loader identical to site experience -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+      <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <!-- Standalone Immersive Top Actions (Floating Theme Toggle only) -->
+  <div style="position: absolute; top: 1.5rem; right: 1.5rem; z-index: 10;">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="background: var(--surface-glass); border: 1px solid var(--surface-border); box-shadow: var(--shadow-sm); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; color: var(--text);"><i class="ph ph-moon"></i></button>
+  </div>
+
+  <!-- Main Standalone Content -->
+  <main class="error-page">
+    <div class="floating-circle-bg"></div>
+    <div class="floating-circle-bg-2"></div>
+    
+    <div class="error-container">
+      <div class="error-card glass reveal zoom-in">
+        <!-- Animation Canvas for Floating Neon Particles -->
+        <div id="particles-wrap" style="position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;"></div>
+        
+        
+        <!-- Interactive 3D Parallax Code Display -->
+        <div class="error-code-wrap">
+          <div class="error-code-glow" id="error-glow">404</div>
+          <div class="error-code" id="error-num">404</div>
+        </div>
+        
+        <h1 class="error-title text-gradient">Looking for a new path?</h1>
+        <p class="error-desc">The page or opportunity you are seeking has vanished into the cloud. Let's help you discover your next role.</p>
+        
+        <!-- Action Pathways -->
+        <div class="error-actions">
+          <a href="index.html" class="btn btn-primary btn-glow">Return Home</a>
+          <button onclick="history.back()" class="btn btn-outline">Previous Page</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/404.js"></script>
+</body>
+</html>

@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Contact Stackly — reach our team for support, partnerships, or general inquiries.">
+  <title>Contact Us | Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --header-logo-height: 42px;
+      --header-logo-height-lg: 90px;
+      --header-logo-mw: 160px;
+      --header-logo-pad: 6px;
+      --header-lg-thresh: 860px;
+    }
+    @media (min-width: 860px) {
+      :root { --header-logo-height: var(--header-logo-height-lg); --header-logo-pad: 10px; }
+    }
+    header.header { font-size: 92%; }
+    .contact-hero { padding-top: 9.5rem; }
+
+    /* Hero */
+    .contact-hero {
+      position: relative;
+      padding: 9.5rem 0 5rem;
+      overflow: hidden;
+      text-align: center;
+    }
+    .contact-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0B1120 0%, #1a237e 40%, #0d47a1 70%, #0B1120 100%);
+      z-index: 0;
+    }
+    .contact-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .contact-hero-orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(37,99,235,0.45) 0%, transparent 70%);
+      top: -100px; left: -100px;
+    }
+    .contact-hero-orb-2 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(124,58,237,0.35) 0%, transparent 70%);
+      bottom: -150px; right: -100px;
+    }
+    .contact-hero-orb-3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(6,182,212,0.3) 0%, transparent 70%);
+      top: 40%; left: 50%; transform: translate(-50%, -50%);
+      animation: contactOrb 6s ease-in-out infinite;
+    }
+    @keyframes contactOrb {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+      50% { transform: translate(-50%, -55%) scale(1.15); opacity: 1; }
+    }
+    .contact-hero .container { position: relative; z-index: 2; }
+    .contact-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .contact-hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .contact-hero-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .contact-particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: rgba(34,211,238,0.6);
+      animation: particleFloat linear infinite;
+    }
+
+    /* Contact Info Cards */
+    .contact-info-section {
+      padding: 0;
+      margin-top: -4rem;
+      position: relative;
+      z-index: 10;
+    }
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .contact-info-card {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-lg);
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-glass);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-info-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-main);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .contact-info-card:hover::before { transform: scaleX(1); }
+    .contact-info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -10px rgba(37,99,235,0.15);
+    }
+    .contact-info-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--gradient-main);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.6rem;
+      color: #fff;
+      box-shadow: 0 8px 20px -4px rgba(37,99,235,0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-info-card:hover .contact-info-icon {
+      transform: rotate(10deg) scale(1.1);
+      box-shadow: 0 12px 30px -4px rgba(37,99,235,0.5);
+    }
+    .contact-info-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .contact-info-card p,
+    .contact-info-card a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .contact-info-card a:hover { color: var(--primary); }
+
+    /* Main Contact Layout */
+    .contact-main-section { padding: 5rem 0; }
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Left: about + socials */
+    .contact-left h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+    .contact-left > p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .contact-divider {
+      width: 60px; height: 4px;
+      background: var(--gradient-main);
+      border-radius: var(--radius-full);
+      margin-bottom: 2rem;
+    }
+    .contact-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .contact-detail-item:last-child { border-bottom: none; }
+    .contact-detail-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(37,99,235,0.08);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      transition: background 0.3s ease;
+    }
+    .contact-detail-item:hover .contact-detail-icon {
+      background: var(--gradient-main);
+      color: #fff;
+    }
+    .contact-detail-text strong {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .contact-detail-text span, .contact-detail-text a {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .contact-detail-text a:hover { color: var(--primary); }
+    .contact-socials {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .contact-social-btn {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--surface-border);
+      background: var(--surface-glass);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted);
+      font-size: 1.2rem;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .contact-social-btn:hover {
+      background: var(--gradient-main);
+      border-color: transparent;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px -4px rgba(37,99,235,0.4);
+    }
+
+    /* Right: Form */
+    .contact-form-card {
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-glass);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-form-card::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-form-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-form-card > p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .contact-form .form-group {
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.02em;
+    }
+    .contact-form .cf-input,
+    .contact-form .cf-textarea,
+    .contact-form .cf-select {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--surface-border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      font-family: var(--font-primary);
+    }
+    .contact-form .cf-input:focus,
+    .contact-form .cf-textarea:focus,
+    .contact-form .cf-select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+    }
+    .contact-form .cf-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .contact-form .input-icon-wrap {
+      position: relative;
+    }
+    .contact-form .input-icon-wrap i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 1rem;
+      pointer-events: none;
+    }
+    .contact-form .input-icon-wrap .cf-input {
+      padding-left: 2.75rem;
+    }
+    .contact-form-submit {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-form-submit i {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    .contact-form-submit:hover i { transform: translateX(4px); }
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.3);
+      color: var(--success);
+      margin-top: 1rem;
+    }
+    .form-success-msg i { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+
+    /* FAQ Section */
+    .contact-faq { padding: 5rem 0; }
+    .contact-faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .contact-faq-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 0.75rem;
+    }
+    .contact-faq-header p { color: var(--muted); }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .faq-item {
+      padding: 1.75rem;
+      border-radius: var(--radius-lg);
+      background: var(--surface-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--surface-border);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .faq-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(37,99,235,0.2);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .faq-question i {
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-question i { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding-top 0.3s ease;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding-top: 1rem;
+    }
+
+    /* Map / Office Section */
+    .contact-office-section { padding: 0 0 5rem; }
+    .contact-office-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      background: var(--surface-glass);
+      border: 1px solid var(--surface-border);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      min-height: 360px;
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-office-info {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--gradient-main);
+      color: #fff;
+    }
+    .contact-office-info h3 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .office-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .office-detail i {
+      font-size: 1.1rem;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+    .office-detail span {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.92;
+    }
+    .contact-office-map {
+      position: relative;
+      overflow: hidden;
+      background: #1a2744;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .map-placeholder {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .map-svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+    .map-pin-anim {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      z-index: 5;
+    }
+    .map-pin-anim i {
+      font-size: 2.8rem;
+      color: var(--neon);
+      filter: drop-shadow(0 0 12px rgba(34,211,238,0.8));
+      animation: mapPinBounce 2s ease-in-out infinite;
+    }
+    .map-pin-label {
+      background: rgba(11,17,32,0.85);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(34,211,238,0.3);
+      white-space: nowrap;
+    }
+    @keyframes mapPinBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .map-grid-line {
+      position: absolute;
+      background: rgba(34,211,238,0.06);
+    }
+    .map-grid-h { width: 100%; height: 1px; left: 0; }
+    .map-grid-v { width: 1px; height: 100%; top: 0; }
+    .map-pulse {
+      position: absolute;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      border: 2px solid rgba(34,211,238,0.3);
+      animation: mapPulse 2s ease-out infinite;
+    }
+    .map-pulse:nth-child(2) { animation-delay: 0.7s; }
+    .map-pulse:nth-child(3) { animation-delay: 1.4s; }
+    @keyframes mapPulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(3); opacity: 0; }
+    }
+
+    /* CTA Strip */
+    .contact-cta-strip {
+      padding: 4rem 0;
+      background: var(--gradient-main);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-cta-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .contact-cta-strip .container { position: relative; z-index: 1; }
+    .contact-cta-strip h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 0.75rem; }
+    .contact-cta-strip p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+    .btn-white {
+      background: #fff;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .btn-white:hover {
+      background: rgba(255,255,255,0.92);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -5px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .contact-info-grid { grid-template-columns: 1fr; }
+      .contact-main-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .contact-office-card { grid-template-columns: 1fr; }
+      .contact-office-map { min-height: 260px; }
+      .contact-form .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 12rem max(1rem, env(safe-area-inset-right)) 8rem max(1rem, env(safe-area-inset-left));
+      }
+      .contact-info-section {
+        margin-top: 0;
+      }
+      .contact-hero h1 {
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+      }
+      .contact-main-grid,
+      .contact-info-grid {
+        gap: 1.25rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-form-card { padding: 1.75rem; }
+      .contact-info-card { padding: 2rem 1.25rem; }
+      .contact-office-card {
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .contact-form-card { padding: 1.25rem; }
+      .contact-socials {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+      <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" style="display: none !important;"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-nav-outline">Login</a>
+        <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="mobile-nav-logo">
+        <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <button id="close-menu-btn" class="close-btn" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-nav-outline">Login</a>
+      <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg"></div>
+    <div class="contact-hero-orb contact-hero-orb-1"></div>
+    <div class="contact-hero-orb contact-hero-orb-2"></div>
+    <div class="contact-hero-orb contact-hero-orb-3"></div>
+
+    <!-- Floating particles (generated by JS) -->
+    <div class="contact-hero-particles" id="contact-particles"></div>
+
+    <div class="container reveal fade-up">
+      <span class="section-badge">Get in Touch</span>
+      <h1>Let's <span class="text-glow">Connect</span></h1>
+      <p>Have a question, partnership idea, or just want to say hello? Our team is here and happy to help.</p>
+    </div>
+  </section>
+
+  <!-- ── INFO CARDS ── -->
+  <section class="contact-info-section">
+    <div class="container">
+      <div class="contact-info-grid">
+        <div class="contact-info-card reveal fade-up delay-100">
+          <div class="contact-info-icon"><i class="ph ph-envelope-simple"></i></div>
+          <h3>Email Us</h3>
+          <p>For general inquiries<br>
+            <a href="mailto:hello@stackly.io">hello@stackly.io</a>
+          </p>
+        </div>
+        <div class="contact-info-card reveal fade-up delay-200">
+          <div class="contact-info-icon"><i class="ph ph-phone-call"></i></div>
+          <h3>Call Us</h3>
+          <p>Mon – Fri, 9 am – 6 pm IST<br>
+            <a href="tel:+917010792745">+91 70107 92745</a>
+          </p>
+        </div>
+        <div class="contact-info-card reveal fade-up delay-300">
+          <div class="contact-info-icon"><i class="ph ph-map-pin-line"></i></div>
+          <h3>Visit Us</h3>
+          <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil<br>Salem, Tamil Nadu 636008</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MAIN CONTACT ── -->
+  <section class="contact-main-section">
+    <div class="container">
+      <div class="contact-main-grid">
+
+        <!-- Left column -->
+        <div class="contact-left reveal slide-left">
+          <h2>We'd love to <span class="text-gradient">hear from you</span></h2>
+          <div class="contact-divider"></div>
+          <p>Whether you're a job seeker with a question, an employer exploring partnerships, or a media contact, our team responds to every message within one business day.</p>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="ph ph-briefcase"></i></div>
+            <div class="contact-detail-text">
+              <strong>Employer Partnerships</strong>
+              <a href="mailto:employers@stackly.io">employers@stackly.io</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="ph ph-headset"></i></div>
+            <div class="contact-detail-text">
+              <strong>Job Seeker Support</strong>
+              <a href="mailto:support@stackly.io">support@stackly.io</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="ph ph-newspaper"></i></div>
+            <div class="contact-detail-text">
+              <strong>Press &amp; Media</strong>
+              <a href="mailto:press@stackly.io">press@stackly.io</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="ph ph-clock"></i></div>
+            <div class="contact-detail-text">
+              <strong>Response Time</strong>
+              <span>Within 1 business day</span>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="404.html" class="contact-social-btn" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="404.html" class="contact-social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="404.html" class="contact-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="404.html" class="contact-social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-card reveal slide-right">
+          <h3>Send us a message</h3>
+          <p>Fill in the form below and we'll get back to you as soon as possible.</p>
+
+          <form class="contact-form" id="contact-form" novalidate action="404.html">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-first-name">First Name</label>
+                <div class="input-icon-wrap">
+                  <i class="ph ph-user"></i>
+                  <input type="text" id="cf-first-name" class="cf-input" placeholder="John" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cf-last-name">Last Name</label>
+                <div class="input-icon-wrap">
+                  <i class="ph ph-user"></i>
+                  <input type="text" id="cf-last-name" class="cf-input" placeholder="Doe" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-email">Email Address</label>
+              <div class="input-icon-wrap">
+                <i class="ph ph-envelope-simple"></i>
+                <input type="email" id="cf-email" class="cf-input" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" class="cf-select" required>
+                <option value="">Select a topic...</option>
+                <option value="job-seeker">Job Seeker Support</option>
+                <option value="employer">Employer / Partnership</option>
+                <option value="technical">Technical Issue</option>
+                <option value="press">Press &amp; Media</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" class="cf-textarea" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary contact-form-submit" id="contact-submit-btn">
+              Send Message <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+
+            <div class="form-success-msg" id="contact-success">
+              <i class="ph ph-check-circle"></i>
+              <strong>Message sent successfully!</strong>
+              <p>Thank you for reaching out. We'll get back to you within one business day.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="contact-faq">
+    <div class="container">
+      <div class="contact-faq-header reveal fade-up">
+        <span class="section-badge">FAQ</span>
+        <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+        <p>Quick answers to the questions we get most often.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal fade-up delay-100" id="faq-1">
+          <div class="faq-question">How do I post a job on Stackly? <i class="ph ph-plus-circle"></i></div>
+          <div class="faq-answer">Create a free recruiter account, complete your company profile, then click "Post a Job" in your dashboard. Your listing goes live instantly after a quick review.</div>
+        </div>
+        <div class="faq-item reveal fade-up delay-200" id="faq-2">
+          <div class="faq-question">Is Stackly free for job seekers? <i class="ph ph-plus-circle"></i></div>
+          <div class="faq-answer">Yes — browsing, applying, and saving jobs is completely free for candidates. We only charge employers for premium listings and advanced hiring tools.</div>
+        </div>
+        <div class="faq-item reveal fade-up delay-100" id="faq-3">
+          <div class="faq-question">How long does it take to get a response? <i class="ph ph-plus-circle"></i></div>
+          <div class="faq-answer">Our support team typically responds within one business day. For urgent technical issues, use the live chat widget in the bottom-right corner for faster assistance.</div>
+        </div>
+        <div class="faq-item reveal fade-up delay-200" id="faq-4">
+          <div class="faq-question">Can I delete my account and data? <i class="ph ph-plus-circle"></i></div>
+          <div class="faq-answer">Yes. Go to Settings → Account → Delete Account. All your personal data is permanently removed within 30 days in compliance with GDPR and CCPA regulations.</div>
+        </div>
+        <div class="faq-item reveal fade-up delay-300" id="faq-5">
+          <div class="faq-question">Do you support international job listings? <i class="ph ph-plus-circle"></i></div>
+          <div class="faq-answer">Absolutely. Stackly lists roles in 80+ countries with currency and timezone localisation. Search by country or filter for "International" and "Visa Sponsored" roles.</div>
+        </div>
+        <div class="faq-item reveal fade-up delay-300" id="faq-6">
+          <div class="faq-question">How do I report a suspicious listing? <i class="ph ph-plus-circle"></i></div>
+          <div class="faq-answer">Click the flag icon on any job card to report it. Our trust and safety team reviews all reports within 24 hours and removes fraudulent listings immediately.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OFFICE / MAP ── -->
+  <section class="contact-office-section">
+    <div class="container">
+      <div class="contact-office-card reveal zoom-in">
+        <div class="contact-office-info">
+          <h3>Our Headquarters</h3>
+          <div class="office-detail">
+            <i class="ph ph-map-pin-line"></i>
+            <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil<br>Salem, Tamil Nadu 636008</span>
+          </div>
+          <div class="office-detail">
+            <i class="ph ph-clock"></i>
+            <span>Monday – Friday<br>9:00 am – 6:00 pm IST</span>
+          </div>
+          <div class="office-detail">
+            <i class="ph ph-subway"></i>
+            <span>Near Chinna Muniyappan Kovil, Salem</span>
+          </div>
+          <div class="office-detail">
+            <i class="ph ph-phone-call"></i>
+            <span>+91 70107 92745</span>
+          </div>
+        </div>
+
+        <!-- Decorative map -->
+        <div class="contact-office-map">
+          <!-- Grid lines -->
+          <div class="map-grid-line map-grid-h" style="top:20%"></div>
+          <div class="map-grid-line map-grid-h" style="top:40%"></div>
+          <div class="map-grid-line map-grid-h" style="top:60%"></div>
+          <div class="map-grid-line map-grid-h" style="top:80%"></div>
+          <div class="map-grid-line map-grid-v" style="left:20%"></div>
+          <div class="map-grid-line map-grid-v" style="left:40%"></div>
+          <div class="map-grid-line map-grid-v" style="left:60%"></div>
+          <div class="map-grid-line map-grid-v" style="left:80%"></div>
+          <!-- Pulse rings -->
+          <div class="map-pulse"></div>
+          <div class="map-pulse"></div>
+          <div class="map-pulse"></div>
+          <!-- Pin -->
+          <div class="map-pin-anim">
+            <i class="ph ph-map-pin-simple-area"></i>
+            <div class="map-pin-label">Stackly HQ — Salem, Tamil Nadu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA STRIP ── -->
+  <section class="contact-cta-strip">
+    <div class="container reveal fade-up">
+      <h2>Ready to find your next opportunity?</h2>
+      <p>Join 20,000+ professionals already building their careers on Stackly.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      
+        <a href="404.html" class="btn btn-glow">Create Free Account</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="lazy">
+          </a>
+          <p>Premium job portal connecting talent with world-class opportunities.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Twitter"><i class="ph ph-twitter-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="ph ph-instagram-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="ph ph-youtube-logo" style="font-size: 2rem;"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>For Job Seekers</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Employers</h4>
+          <ul>
+            <li><a href="404.html">Post a Job</a></li>
+            <li><a href="404.html">Pricing</a></li>
+            <li><a href="404.html">Recruiter Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p>Weekly curated jobs in your inbox.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email">
+            <button type="submit" class="btn btn-glow">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Stackly. All rights reserved.</span>
+        <span class="footer-legal"><a href="404.html">Privacy</a><span>&middot;</span><a href="404.html">Terms</a><span>&middot;</span><a href="404.html">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    /* ── Contact Page JS ── */
+
+    // Floating particles in hero
+    (function() {
+      const wrap = document.getElementById('contact-particles');
+      if (!wrap) return;
+      for (let i = 0; i < 22; i++) {
+        const p = document.createElement('div');
+        p.className = 'contact-particle';
+        const size = Math.random() * 4 + 2;
+        const x = Math.random() * 100;
+        const dur = Math.random() * 12 + 8;
+        const delay = Math.random() * 10;
+        const opacity = Math.random() * 0.5 + 0.2;
+        p.style.cssText = `
+          left:${x}%;bottom:-10px;
+          width:${size}px;height:${size}px;
+          opacity:${opacity};
+          animation-duration:${dur}s;
+          animation-delay:${delay}s;
+        `;
+        wrap.appendChild(p);
+      }
+    })();
+
+    /* Particle keyframe (injected once) */
+    (function() {
+      const st = document.createElement('style');
+      st.textContent = `
+        @keyframes particleFloat {
+          0%   { transform: translateY(0) scale(1); opacity: 0; }
+          10%  { opacity: 1; }
+          90%  { opacity: 0.6; }
+          100% { transform: translateY(-110vh) scale(0.5); opacity: 0; }
+        }
+      `;
+      document.head.appendChild(st);
+    })();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Contact form submit
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('contact-success');
+    const submitBtn = document.getElementById('contact-submit-btn');
+
+    if (form) {
+      // Helper: show/clear inline errors
+      function showError(input, msg) {
+        clearError(input);
+        const err = document.createElement('span');
+        err.className = 'cf-error';
+        err.style.cssText = 'color:#ef4444;font-size:0.8rem;margin-top:0.3rem;display:block;';
+        err.textContent = msg;
+        input.closest('.form-group').appendChild(err);
+        input.style.borderColor = '#ef4444';
+      }
+      function clearError(input) {
+        const group = input.closest('.form-group');
+        const existing = group.querySelector('.cf-error');
+        if (existing) existing.remove();
+        input.style.borderColor = '';
+      }
+
+      // Clear error on input
+      ['cf-first-name','cf-last-name'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', () => clearError(el));
+          el.addEventListener('input', () => {
+            el.value = el.value.replace(/[^A-Za-z\s\-]/g, '');
+          });
+        }
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const firstName = document.getElementById('cf-first-name');
+        const lastName = document.getElementById('cf-last-name');
+        const email = document.getElementById('cf-email');
+        const alphaRegex = /^[A-Za-z\s\-]+$/;
+        let valid = true;
+
+        // Validate First Name — alpha only
+        if (!firstName.value.trim() || !alphaRegex.test(firstName.value.trim())) {
+          showError(firstName, 'First name must contain only letters.');
+          valid = false;
+        }
+
+        // Validate Last Name — alpha only
+        if (!lastName.value.trim() || !alphaRegex.test(lastName.value.trim())) {
+          showError(lastName, 'Last name must contain only letters.');
+          valid = false;
+        }
+
+        // Validate Email — must be @gmail.com
+        const emailVal = email.value.trim().toLowerCase();
+        if (!emailVal || !emailVal.endsWith('@gmail.com') || emailVal.indexOf('@') === 0) {
+          showError(email, 'Please enter a valid @gmail.com email address.');
+          valid = false;
+        }
+
+        if (!valid) return;
+
+        window.location.href = '404.html';
+      });
+    }
+
+    // Spin keyframe for spinner
+    (function() {
+      const st = document.createElement('style');
+      st.textContent = `
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes fadeInUp {
+          from { opacity:0; transform:translateY(16px); }
+          to   { opacity:1; transform:translateY(0); }
+        }
+      `;
+      document.head.appendChild(st);
+    })();
+  </script>
+</body>
+</html>

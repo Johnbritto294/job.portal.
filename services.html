@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Stackly Services — premium offerings to accelerate your career or hiring process.">
+  <title>Services | Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --header-logo-height: 42px;
+      --header-logo-height-lg: 90px;
+      --header-logo-mw: 160px;
+      --header-logo-pad: 6px;
+      --header-lg-thresh: 860px;
+    }
+    @media (min-width: 860px) {
+      :root { --header-logo-height: var(--header-logo-height-lg); --header-logo-pad: 10px; }
+    }
+    header.header { font-size: 92%; }
+    section.page-hero-small { padding-top: 9.5rem; }
+    .page-hero-small h1 { font-size: clamp(1.85rem, 6vw, 2.6rem); margin-bottom: 0.6rem; word-break: break-word; }
+    .page-hero-small p { font-size: 1.05rem; max-width: 92%; margin-inline: auto; line-height: 1.55; overflow-wrap: anywhere; }
+    .section-header { max-width: 1100px; }
+    .section-header + div { max-width: 1100px; margin-inline: auto; }
+    .grid-3 > *, .grid-2 > * { min-width: 0; }
+  </style>
+</head>
+<body>
+  <div id="page-loader" class="page-loader">
+    <div class="loader-logo-wrap">
+      <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="loader-logo-img" loading="eager">
+    </div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+          <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="lazy">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" style="display: none !important;"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-nav-outline">Login</a>
+        <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="mobile-nav-logo">
+        <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="eager">
+      </a>
+      <button id="close-menu-btn" class="close-btn" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-nav-outline">Login</a>
+      <a href="signup.html" class="btn btn-nav-cta">Get Started</a>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="page-hero-small" style="position: relative; overflow: hidden; background: #0B1120;">
+    <div class="container text-center reveal fade-up" style="position: relative; z-index: 10;">
+      <span class="section-badge" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff;">Premium Offerings</span>
+      <h1 style="color: #fff; font-size: 3.5rem; margin-bottom: 1rem;">Expert <span class="text-glow" style="color: #22D3EE;">Services</span></h1>
+      <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; font-size: 1.125rem;">Accelerate your career or supercharge your hiring pipeline with our dedicated expert services and enterprise solutions.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap: 4rem; align-items: center;">
+        <div class="glass reveal slide-right" style="padding: 1rem; border-radius: var(--radius-lg); background: var(--surface);">
+          <img inert draggable="false" data-no-visual-search src="images/hero-right-3.webp" alt="Career consulting" style="border-radius: var(--radius-md); width: 100%; height: auto; max-height: 400px; object-fit: cover; box-shadow: var(--shadow-md);">
+        </div>
+        <div class="reveal slide-left delay-200">
+          <span class="section-badge">Career Acceleration</span>
+          <h2>Resume & <span class="text-gradient">Coaching</span></h2>
+          <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-muted);">Stand out from the crowd. Our industry experts will help you craft a compelling narrative, optimize your resume for ATS systems, and prepare you for technical interviews.</p>
+          <ul style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem;"><i class="ph-fill ph-check-circle" style="font-size: 1.5rem; color: var(--primary);"></i> <strong>Resume Revamp:</strong> Complete rewrite and design.</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem;"><i class="ph-fill ph-check-circle" style="font-size: 1.5rem; color: var(--primary);"></i> <strong>Mock Interviews:</strong> 1-on-1 sessions with hiring managers.</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem;"><i class="ph-fill ph-check-circle" style="font-size: 1.5rem; color: var(--primary);"></i> <strong>Salary Negotiation:</strong> Learn how to ask for what you're worth.</li>
+          </ul>
+          <a href="404.html" class="btn btn-primary">Book a Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: rgba(37, 99, 235, 0.02);">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Enterprise</span>
+        <h2>Hiring <span class="text-gradient">Solutions</span></h2>
+      </div>
+      <div class="grid-3" style="gap: 2rem;">
+        <div class="about-card glass reveal fade-up delay-100" style="padding: 2.5rem 2rem; text-align: center; border-radius: var(--radius-lg); transition: transform 0.3s ease;">
+          <div class="about-card-icon" style="width: 72px; height: 72px; background: rgba(37,99,235,0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;"><i class="ph ph-buildings"></i></div>
+          <h3 style="margin-bottom: 1rem;">Managed Recruiting</h3>
+          <p class="text-muted">Let our dedicated recruiters source, vet, and deliver a shortlist of top candidates directly to your inbox.</p>
+        </div>
+        <div class="about-card glass reveal fade-up delay-200" style="padding: 2.5rem 2rem; text-align: center; border-radius: var(--radius-lg); transition: transform 0.3s ease;">
+          <div class="about-card-icon" style="width: 72px; height: 72px; background: rgba(124,58,237,0.1); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;"><i class="ph ph-presentation-chart"></i></div>
+          <h3 style="margin-bottom: 1rem;">Employer Branding</h3>
+          <p class="text-muted">Boost your visibility with customized company pages, video testimonials, and featured placements.</p>
+        </div>
+        <div class="about-card glass reveal fade-up delay-300" style="padding: 2.5rem 2rem; text-align: center; border-radius: var(--radius-lg); transition: transform 0.3s ease;">
+          <div class="about-card-icon" style="width: 72px; height: 72px; background: rgba(6,182,212,0.1); color: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;"><i class="ph ph-handshake"></i></div>
+          <h3 style="margin-bottom: 1rem;">API Integration</h3>
+          <p class="text-muted">Sync Stackly directly with your existing ATS (Greenhouse, Lever, Workday) for a seamless workflow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: rgba(124, 58, 237, 0.01);">
+    <div class="container">
+      <div class="section-header text-center reveal fade-up">
+        <span class="section-badge">Pricing Plans</span>
+        <h2>Choose Your <span class="text-gradient">Accelerator</span></h2>
+        <p style="margin-top: 0.5rem; color: var(--text-muted);">Simple, transparent pricing tailored for individuals and growing companies.</p>
+      </div>
+      <div class="grid-3" style="gap: 2rem; align-items: stretch;">
+        <div class="about-card glass reveal fade-up delay-100" style="padding: 3rem 2rem; border-radius: var(--radius-lg); display: flex; flex-direction: column; text-align: left; height: 100%;">
+          <span style="font-weight: 700; text-transform: uppercase; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.05em;">Starter Plan</span>
+          <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: var(--text);">Free <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/ forever</span></div>
+          <p class="text-muted" style="margin-bottom: 1.5rem; flex-grow: 1; min-height: 4.5rem;">Essential tools for job seekers to start searching and applying to listed roles.</p>
+          <hr style="border: 0; border-top: 1px solid var(--surface-border); margin-bottom: 1.5rem;">
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> 10 Job Applications / mo</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> Standard Profile & Resume</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> Basic Job Alerts</li>
+          </ul>
+          <a href="404.html" class="btn btn-primary" style="width: 100%; margin-top: auto; text-align: center;">Get Started</a>
+        </div>
+
+        <div class="about-card glass reveal fade-up delay-200" style="padding: 3rem 2rem; border-radius: var(--radius-lg); display: flex; flex-direction: column; text-align: left; height: 100%; border-color: var(--primary); position: relative;">
+          <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.25rem 1rem; font-size: 0.75rem; font-weight: 700; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap;">Most Popular</span>
+          <span style="font-weight: 700; text-transform: uppercase; color: var(--primary); font-size: 0.85rem; letter-spacing: 0.05em;">Pro Member</span>
+          <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: var(--text);">$19 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/ month</span></div>
+          <p class="text-muted" style="margin-bottom: 1.5rem; flex-grow: 1; min-height: 4.5rem;">Supercharge your job search with unlimited applications and high-visibility matching features.</p>
+          <hr style="border: 0; border-top: 1px solid var(--surface-border); margin-bottom: 1.5rem;">
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> Unlimited Applications</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> Featured Candidate Status</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> Smart AI Resume Optimization</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--primary);"></i> Advanced Salary Insights</li>
+          </ul>
+          <a href="404.html" class="btn btn-primary" style="width: 100%; margin-top: auto; text-align: center; box-shadow: 0 0 15px rgba(37,99,235,0.25);">Join Pro Now</a>
+        </div>
+
+        <div class="about-card glass reveal fade-up delay-300" style="padding: 3rem 2rem; border-radius: var(--radius-lg); display: flex; flex-direction: column; text-align: left; height: 100%;">
+          <span style="font-weight: 700; text-transform: uppercase; color: var(--secondary); font-size: 0.85rem; letter-spacing: 0.05em;">Enterprise Pro</span>
+          <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: var(--text);">$299 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/ month</span></div>
+          <p class="text-muted" style="margin-bottom: 1.5rem; flex-grow: 1; min-height: 4.5rem;">Complete hiring solution for teams sourcing candidates, managing pipelines, and building brand presence.</p>
+          <hr style="border: 0; border-top: 1px solid var(--surface-border); margin-bottom: 1.5rem;">
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--secondary);"></i> 5 Active Recruiter Seats</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--secondary);"></i> Direct Greenhouse/Lever ATS Integration</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--secondary);"></i> Unlimited Video Introductions</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph ph-check" style="color: var(--secondary);"></i> Custom Employer Branding Profile</li>
+          </ul>
+          <a href="404.html" class="btn btn-primary" style="width: 100%; margin-top: auto; text-align: center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" style="margin-bottom: 0;">
+    <div class="cta-bg parallax" data-speed="0.2">
+      <img inert draggable="false" data-no-visual-search src="images/cta-bg.webp" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div class="cta-overlay"></div>
+    <div class="container cta-content reveal fade-up" style="position: relative; z-index: 10; text-align: center; padding: 6rem 0;">
+      <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Elevate Your <span class="text-glow" style="color: #22D3EE;">Potential</span></h2>
+      <p style="color: rgba(255,255,255,0.9); margin-bottom: 2.5rem; font-size: 1.125rem;">Reach out to our team to discover how our services can work for you.</p>
+      <a href="404.html" class="btn btn-glow">Contact Sales</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+<div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img inert draggable="false" data-no-visual-search src="images/stacklylogo.webp" alt="Stackly" class="logo-img" loading="lazy">
+          </a>
+          <p>Premium job portal connecting talent with world-class opportunities.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Twitter"><i class="ph ph-twitter-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="ph ph-instagram-logo" style="font-size: 2rem;"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="ph ph-youtube-logo" style="font-size: 2rem;"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>For Job Seekers</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Employers</h4>
+          <ul>
+            <li><a href="404.html">Post a Job</a></li>
+            <li><a href="404.html">Pricing</a></li>
+            <li><a href="404.html">Recruiter Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p>Weekly curated jobs in your inbox.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email" required aria-label="Email">
+            <button type="submit" class="btn btn-glow">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Stackly. All rights reserved.</span>
+        <span class="footer-legal"><a href="404.html">Privacy</a><span>&middot;</span><a href="404.html">Terms</a><span>&middot;</span><a href="404.html">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
